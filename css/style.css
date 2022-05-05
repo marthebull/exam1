@@ -1,0 +1,167 @@
+/* Global style ---------------------------------------------*/
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Roboto Condensed', Tahoma, Verdana, sans-serif;
+    font-weight: 600;
+    letter-spacing: .1rem;
+}
+
+body {
+    background-color: #f6f6f6;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+p {
+    font-family: 'Open sans', Tahoma, Verdana, sans-serif;
+}
+
+main {
+    max-width: 1200px;
+    padding: 20px;
+}
+
+
+/* Header ---------------------------------------------------------------*/
+
+
+.nav-cont {
+    max-width: 100%;
+    padding: 30px;
+}
+
+.nav-black {
+    background-color: #383838;
+}
+
+.nav-black a {
+    color: #f6f6f6;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    width: 140px;
+    }
+
+
+.nav-item {
+    font-size: 1.3rem;
+    color: #383838;
+    margin-left: 20px;
+}
+
+.nav .black a {
+    color: #f6f6f6;
+}
+
+.active {
+    border-bottom: 1.2px solid;
+    padding-bottom: 5px;
+}
+
+.hero {
+    height: 85vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero-home {
+    background-image: url("/images/Opt-images/whales-desktop-vivek-kumar-.jpg");
+}
+
+.hero-about {
+    background-image: url("/images/Opt-images/turtles-desktop-josue-soto-.jpg");
+}
+
+
+/* Footer ----------------------------------------------------*/
+
+footer {
+    background-color: #383838;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+footer .nav-item{
+    color: #f6f6f6;
+
+}
+
+footer div {
+    margin: auto;
+    display: flex;
+    gap: 20px;
+}
+
+#social {
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+}
+
+.fa-brands {
+    color: #f6f6f6;
+    font-size: 1.5rem;
+}
+
+#copyright {
+    color: #f6f6f6;
+    text-align: center;
+    font-size: .9rem;
+}
+
+/* Media queries -----------------------------------------------*/
+
+@media screen and (max-width: 1024px) {
+
+}
+
+
+
+
+
+@media screen and (max-width: 650px) {
+
+    /* Header*/
+
+    .hero-home {
+        background-image: url("/images/Opt-images/whales-mobile-vivek-kumar-.jpg");
+    }
+
+    .hero-about {
+        background-image: url("/images/Opt-images/turtles-mobile-josue-soto-.jpg");
+    }
+
+    /*Footer */
+
+    #footer-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-item {
+        margin: 0;
+    }
+
+}
