@@ -24,19 +24,24 @@ a {
 }
 
 
-p {
+p, label, input[type=text] {
     font-family: 'Open sans', Tahoma, Verdana, sans-serif;
     letter-spacing: 0rem;
     line-height: 2rem;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .white {
     color: #f6f6f6;
 }
 
-.black {
+.black, #insta-black {
     color: #383838;
+}
+
+.red {
+    color: rgb(192, 0, 0);
+    margin-left: 5px;
 }
 
 .b-white {
@@ -48,12 +53,15 @@ p {
     color: #f6f6f6;
 }
 
-.button {
+.button, #submit-button {
     padding: 20px 40px;
     margin: 20px auto;
     text-align: center;
-    
 }
+
+#submit-button {
+    border: none;
+    min-width: 200px;}
 
 
 /* Header ---------------------------------------------------------------*/
@@ -159,6 +167,36 @@ main > div {
 }
 
 /*Contact us*/
+
+#val-message {
+    display: none;
+}
+
+input[type=text] {
+    border: none;
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+#message {
+    min-height: 150px;
+}
+
+#contact-us {
+    display: flex;
+    gap: 40px;
+}
+
+#contact-us div {
+    flex: 1;
+    max-width: 35vw;
+}
+
+#contact-info {
+    margin-top: 30px;
+}
 
 
 
