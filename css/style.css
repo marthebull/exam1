@@ -35,6 +35,10 @@ p {
     color: #f6f6f6;
 }
 
+.black {
+    color: #383838;
+}
+
 .b-white {
     background-color: #f6f6f6;
 }
@@ -123,20 +127,10 @@ main {
     background-color: #f6f6f6;
 }
 
-#about-us-short {
-    background-image: url("/images/Opt-images/rhino-destop-vaughn-wright.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    width: 100vw;
-	position: relative;
-	left: 50%;
-	right: 50%;
-	margin-left: -50vw;
-	margin-right: -50vw;
-    padding: 50px 0;
+main > div {
+    margin: 50px 0;
 }
+
 
 .text-content, .text-content div {
     max-width: 700px;
@@ -146,6 +140,27 @@ main {
     flex-direction: column;
     justify-items: center;
 }
+
+
+/*About us */
+
+#about-us-short {
+    background-image: url("/images/Opt-images/rhino-destop-vaughn-wright.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+    padding: 50px 0;
+}
+
+/*Contact us*/
+
+
 
 
 /* Footer ----------------------------------------------------*/
@@ -184,6 +199,7 @@ footer div {
     color: #f6f6f6;
     text-align: center;
     font-size: .9rem;
+    margin: 0;
 }
 
 /* Media queries -----------------------------------------------*/
