@@ -13,8 +13,10 @@ body {
     background-color: #f6f6f6;
 }
 
-h1 {
+h1, h2 {
     font-size: 2rem;
+    text-align: center;
+    margin: 20px auto;
 }
 
 a {
@@ -24,11 +26,29 @@ a {
 
 p {
     font-family: 'Open sans', Tahoma, Verdana, sans-serif;
+    letter-spacing: 0rem;
+    line-height: 2rem;
+    margin-bottom: 40px;
 }
 
-main {
-    max-width: 1200px;
-    padding: 20px;
+.white {
+    color: #f6f6f6;
+}
+
+.b-white {
+    background-color: #f6f6f6;
+}
+
+.b-black {
+    background-color: #383838;
+    color: #f6f6f6;
+}
+
+.button {
+    padding: 20px 40px;
+    margin: 20px auto;
+    text-align: center;
+    
 }
 
 
@@ -90,6 +110,42 @@ main {
 
 .hero-about {
     background-image: url("/images/Opt-images/turtles-desktop-josue-soto-.jpg");
+
+}
+
+
+/* Main ------------------------------------------------------*/
+
+main {
+    max-width: 1200px;
+    padding: 20px;
+    margin: auto;
+}
+
+
+
+#about-us-short {
+    background-image: url("/images/Opt-images/rhino-destop-vaughn-wright.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+    padding: 50px 0;
+}
+
+.text-content {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
 }
 
 
