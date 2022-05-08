@@ -110,7 +110,7 @@ p, label, input[type=text] {
 }
 
 .hero {
-    height: 85vh;
+    height: 60vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -121,7 +121,7 @@ p, label, input[type=text] {
 }
 
 .hero-about {
-    background-image: url("/images/Opt-images/turtles-desktop-josue-soto-.jpg");
+    background-image: url("/images/Opt-images/turtle-desktop-david-leveque.jpg");
 
 }
 
@@ -135,7 +135,7 @@ main {
     background-color: #f6f6f6;
 }
 
-main > div {
+main > div, #contact-h1 {
     margin: 50px 0;
 }
 
@@ -150,7 +150,13 @@ main > div {
 }
 
 
-/*About us */
+/* Home */
+
+#latest-posts, #categories {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
 
 #about-us-short {
     background-image: url("/images/Opt-images/rhino-destop-vaughn-wright.jpg");
@@ -186,7 +192,9 @@ input[type=text] {
 
 #contact-us {
     display: flex;
+    flex-direction: row;
     gap: 40px;
+    justify-content: center;
 }
 
 #contact-us div {
@@ -196,6 +204,14 @@ input[type=text] {
 
 #contact-info {
     margin-top: 30px;
+}
+
+#contact-info i {
+    margin-right: 5px;
+}
+
+#insta-black {
+    font-size: 1.2rem;
 }
 
 
@@ -259,8 +275,23 @@ footer div {
     }
 
     .hero-about {
-        background-image: url("/images/Opt-images/turtles-mobile-josue-soto-.jpg");
+        background-image: url("/images/Opt-images/turtle-mobile-david-leveque.jpg");
     }
+
+
+    /* Contact us */
+
+    #contact-us {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #contact-us div {
+        flex: 1;
+        max-width: 90vw;
+    }
+
+
 
     /*Footer */
 
@@ -272,5 +303,7 @@ footer div {
     .nav-item {
         margin: 0;
     }
+
+
 
 }
