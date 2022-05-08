@@ -120,9 +120,8 @@ main {
     max-width: 1200px;
     padding: 20px;
     margin: auto;
+    background-color: #f6f6f6;
 }
-
-
 
 #about-us-short {
     background-image: url("/images/Opt-images/rhino-destop-vaughn-wright.jpg");
@@ -139,9 +138,9 @@ main {
     padding: 50px 0;
 }
 
-.text-content {
+.text-content, .text-content div {
     max-width: 700px;
-    margin: 40px auto;
+    margin: 10px auto;
     padding: 20px;
     display: flex;
     flex-direction: column;
