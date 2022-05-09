@@ -2,35 +2,41 @@ const queryString = window.location.search;
 const id = new URLSearchParams(queryString).get('id');
 if (!id) { window.location = "posts.html"; }
 
-let out = document.querySelector("#blog-post");
 
-fetch(`https://marthebull.no/exam1/wp-json/wp/v2/posts/${id}`, {
-	"method": "GET",
 
-})
-
+const url = `https://marthebull.no/exam1/wp-json/wp/v2/posts/${id}`;
+//const url = `https://www.geek.no/wp-json/wp/v2/pages/${id}`;
+fetch(url)
 .then(response => response.json())
-.then(myData => {
-    console.log(myData[0]);
-    listData(myData[0]);
+.then(data => {
+  //console.log('Success:', data);
+  displayPost(data);
 })
+.catch((error) => {
+  console.error('Error:', error);
+});
 
-.catch(error => out.innerHTML = "Something's wrong!");
+const output = document.querySelector("#blog-post");
+function displayPost (data) {
+    console.log(data); 
+    const title = data.title.rendered;
+    const date = data.date;
+    const category = data.categories;
 
-
-function listData(amiibo) {
-    console.log(amiibo);
-    document.title = amiibo.character; 
-    let newDiv = `
+    let content = `
         <h1>${title}</h1>
-        <img src="${amiibo.image}" alt="${amiibo.character}">
-        <p>Name: <strong>${amiibo.name}</strong></p>
-        <p>Amiibo Series: ${amiibo.amiiboSeries}</p>
-        <p>Game Series: ${amiibo.gameSeries}</p>
-        <p>Released (in Japan): ${amiibo.release.jp}
-        <p>Type: ${amiibo.type}</p>
-        <p><a href="amiibo.html">Back</a></p>
+        <p>${date}</p>
+        <p>${date}</p>
+
+  
     `;
-    out.innerHTML = newDiv;
-    status.innerHTML = "";
+
+  output.innerHTML = content;
+  document.title = title;
 }
+
+
+
+
+
+
