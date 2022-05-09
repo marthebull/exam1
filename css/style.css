@@ -19,9 +19,19 @@ h1, h2 {
     margin: 20px auto;
 }
 
+.post-h2 {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-left: 20px;
+}
+
 a {
     text-decoration: none;
 }
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+  }
 
 
 p, label, input[type=text] {
@@ -53,18 +63,18 @@ p, label, input[type=text] {
     color: #f6f6f6;
 }
 
-.button, #submit-button, #loadBtn {
+.button, #submit-button, #loadMore {
     padding: 20px 40px;
     margin: 20px auto;
     text-align: center;
 }
 
-#submit-button, #loadBtn {
+#submit-button, #loadMore {
     border: none;
     min-width: 200px;
 }
 
-#loadBtn {
+#loadMore {
     margin: 20px auto;
 }
 
@@ -225,6 +235,8 @@ input[type=text] {
 
 /* Posts*/
 
+
+
 #blog-cont {
     display: flex;
     flex-direction: column;
@@ -237,12 +249,14 @@ input[type=text] {
 
 .post-card {
     background-color: white;
-    padding: 15px;
-    
 }
 
 .post-card img {
-    max-height: 200px;
+    max-width: 100%;
+}
+
+.post-card p {
+    margin: 20px;
 }
 
 
