@@ -53,15 +53,20 @@ p, label, input[type=text] {
     color: #f6f6f6;
 }
 
-.button, #submit-button {
+.button, #submit-button, #loadBtn {
     padding: 20px 40px;
     margin: 20px auto;
     text-align: center;
 }
 
-#submit-button {
+#submit-button, #loadBtn {
     border: none;
-    min-width: 200px;}
+    min-width: 200px;
+}
+
+#loadBtn {
+    margin: 20px auto;
+}
 
 
 /* Header ---------------------------------------------------------------*/
@@ -155,6 +160,7 @@ main > div, .no-div-h1 {
 #latest-posts, #categories, #blog-posts {
     display: flex;
     justify-content: center;
+    gap: 30px;
     padding: 30px 0;
 }
 
@@ -218,6 +224,26 @@ input[type=text] {
 
 
 /* Posts*/
+
+#blog-cont {
+    display: flex;
+    flex-direction: column;
+}
+
+#blog-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.post-card {
+    background-color: white;
+    padding: 15px;
+    
+}
+
+.post-card img {
+    max-height: 200px;
+}
 
 
 
