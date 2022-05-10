@@ -34,11 +34,23 @@ a, a:visited, a:hover, a:active {
   }
 
 
-p, label, input[type=text] {
+p, label, input[type=text],p > a, li {
     font-family: 'Open sans', Tahoma, Verdana, sans-serif;
     letter-spacing: 0rem;
     line-height: 2rem;
     margin-bottom: 20px;
+}
+
+li {
+    line-height: 1rem;
+    margin-left: 20px;
+}
+
+.wp-block-quote p{
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', Tahoma, Verdana, sans-serif;
 }
 
 .white {
@@ -137,7 +149,6 @@ p, label, input[type=text] {
 
 .hero-about {
     background-image: url("/images/Opt-images/turtle-desktop-david-leveque.jpg");
-
 }
 
 
@@ -162,6 +173,11 @@ main > div, .no-div-h1 {
     display: flex;
     flex-direction: column;
     justify-items: center;
+}
+
+.text-content img {
+    max-width: 100%;
+    height: auto;
 }
 
 

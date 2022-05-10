@@ -16,23 +16,29 @@ fetch(url)
   console.error('Error:', error);
 });
 
+const postHero = document.querySelector("#hero-post");
 const output = document.querySelector("#blog-post");
+
 function displayPost (data) {
     console.log(data); 
     const title = data.title.rendered;
     const date = data.date;
     const category = data.categories;
+    const postContent = data.content.rendered;
+    const heroImg = data.featured_media;
+    
+    
 
     let content = `
         <h1>${title}</h1>
         <p>${date}</p>
-        <p>${date}</p>
-
-  
+        <p>${postContent}</p>  
     `;
 
-  output.innerHTML = content;
-  document.title = title;
+    postHero.innerHTML = heroImg;
+    output.innerHTML = content;
+    document.title = title;
+  
 }
 
 
