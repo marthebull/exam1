@@ -118,6 +118,7 @@ li {
 
 #logo {
     width: 140px;
+    margin: 0;
     }
 
 
@@ -183,11 +184,14 @@ main > div, .no-div-h1 {
 
 /* Loading divs > future content*/
 
-#latest-posts, #categories, #blog-posts {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+
+
+#blog-posts, #latest-posts, #categories {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 50px;
     padding: 30px 0;
+    justify-content: center;
 }
 
 /* Home */
@@ -204,6 +208,36 @@ main > div, .no-div-h1 {
 	margin-left: -50vw;
 	margin-right: -50vw;
     padding: 50px 0;
+}
+
+#categories div {
+    height: 420px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    color: #f6f6f6;
+    background-size: cover;
+}
+
+#categories h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 2.2rem;
+    max-width: 200px;
+    position: relative;
+    top: 65%;
+}
+
+#species {
+    background-image: url("/images/Opt-images/leo-category-uriel-soberanes.jpg");
+}
+
+#climate {
+    background-image: url("/images/Opt-images/ice-category-annie-spratt-o.jpg");
+}
+
+#work {
+    background-image: url("/images/Opt-images/category-saving-the-ocean.jpg");
 }
 
 /*Contact us*/
@@ -263,7 +297,6 @@ input[type=text] {
     font-size: 1.2rem;
 }
 
-
 .message {
     
     padding: 10px; 
@@ -284,7 +317,6 @@ input[type=text] {
 
 
 /* Posts*/
-
 
 
 #blog-cont {
@@ -308,6 +340,16 @@ input[type=text] {
 .post-card p {
     margin: 20px;
 }
+
+/* Post */
+
+.date {
+    text-align: center;
+    color: #5c5c5c;
+    font-size: .8rem;
+}
+
+
 
 
 
