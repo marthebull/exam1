@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e7adbf31fa.js" crossorigin="anonymous"></script>
-    <script src="./script.js" defer></script>
+    <script src="./js/contact.js" defer></script>
 </head>
 <body>
     <header>
@@ -30,31 +30,31 @@
         </div>
     </header>
     <main>
+        <p id="val-message"></p>
         <h1 class="black">CONTACT US</h1>
         <div id="contact-us">
             <div id="contact-form">
-                <p id="val-message">&nbsp;</p>
                 <form>
                     <div id="form-container">
                         <div>
                             <label for="name">Name<span class="red">*</span></label>
                             <input type="text" id="name" name="name">
-                            <span id="nameMsg"></span>
+                            <span id="nameMsg" class="msg"></span>
                         </div>
                         <div>
                             <label for="email">Email<span class="red">*</span></label>
                             <input type="text" id="email">
-                            <span id="emailMsg"></span>
+                            <span id="emailMsg" class="msg"></span>
                         </div>
                         <div>
                             <label for="subject">Subject<span class="red">*</span></label>
                             <input type="text" id="subject">
-                            <span id="subjectMsg"></span>
+                            <span id="subjectMsg" class="msg"></span>
                         </div>
                         <div>
                             <label for="message">Message<span class="red">*</span></label>
                             <input type="text" id="message">
-                            <span id="messageMsg"></span>
+                            <span id="messageMsg" class="msg"></span>
                         </div>
                         <div>  
                             <input id="submit-button" class="b-black" type="submit" value="SEND">
