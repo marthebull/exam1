@@ -29,8 +29,8 @@ a {
     text-decoration: none;
 }
 
-a, a:visited, a:hover, a:active {
-    color: inherit;
+a:visited > p, a > p, a {
+    color: #383838;
   }
 
 
@@ -68,6 +68,7 @@ li {
 
 .b-white {
     background-color: #f6f6f6;
+    color: #383838;
 }
 
 .b-black {
@@ -182,16 +183,24 @@ main > div, .no-div-h1 {
 }
 
 
+
+
+
 /* Loading divs > future content*/
 
 
 
 #blog-posts, #latest-posts, #categories {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 50px;
     padding: 30px 0;
     justify-content: center;
+}
+
+.loading, #loading {
+    max-width: 64px;
+    margin: auto;
 }
 
 /* Home */
@@ -209,6 +218,8 @@ main > div, .no-div-h1 {
 	margin-right: -50vw;
     padding: 50px 0;
 }
+
+
 
 #categories div {
     height: 420px;
@@ -347,6 +358,10 @@ input[type=text] {
     text-align: center;
     color: #5c5c5c;
     font-size: .8rem;
+}
+
+.wp-block-image {
+    margin: 30px 0;
 }
 
 

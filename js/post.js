@@ -31,7 +31,7 @@ function displayPost (data) {
 
     let content = `
         <h1>${title}</h1>
-        <p class="date">${date}</p>
+        <p class="date">${date.getDate()}</p>
         <p>${postContent}</p>  
     `;
 
