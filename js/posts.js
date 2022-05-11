@@ -13,6 +13,7 @@ fetch("https://marthebull.no/exam1/wp-json/wp/v2/posts?_embed", {
 
 
 const allPosts = document.querySelector("#blog-posts");
+const postsCont = document.querySelector("#blog-cont");
 
 
 // Lister ut 10 poster til BLOG siden
@@ -32,25 +33,8 @@ function listData(list){
             </a>
         </div>`;
     }
+
+    postsCont.innerHTML += `<button id="loadMore" class="b-black">LOAD MORE POSTS</button>`;
 }
 
 // Load more posts
-
-const loadMore = document.querySelector('#loadMore');
-    let currentPosts = 10;
-    loadMore.addEventListener('click', (e) => {
-
-        
-        const postList = [...document.querySelectorAll('#blog-posts .post-card')];
-        for (let i = currentPosts; i < currentPosts + 10; i++) {
-            if (postList[i]) {
-                postList[i].style.display = 'block';
-            }
-        }
-        currentPosts += 10;
-
-        // Load more button will be hidden after list fully loaded
-        if (currentPosts >= postList.length) {
-            event.target.style.display = 'none';
-        }
-    })
