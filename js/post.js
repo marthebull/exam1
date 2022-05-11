@@ -17,11 +17,13 @@ fetch(url)
 });
 
 const output = document.querySelector("#blog-post");
+const metaDesc = document.querySelector("#meta-desc");
 
 function displayPost (data) {
   console.log(data); 
   const title = data.title.rendered;
   const date = data.date;
+  const excerpt = data.excerpt;
   const postContent = data.content.rendered;
   getImageURL(data.featured_media); 
     
@@ -35,6 +37,7 @@ function displayPost (data) {
 
   
   output.innerHTML = content;
+  metaDesc.innerHTML = excerpt;
   document.title = title;
   
 }
