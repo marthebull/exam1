@@ -193,7 +193,7 @@ main > div, .no-div-h1 {
 #blog-posts, #latest-posts, #categories {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 50px;
+    gap: 30px;
     padding: 30px 0;
     justify-content: center;
 }
@@ -228,6 +228,7 @@ main > div, .no-div-h1 {
     justify-content: center;
     color: #f6f6f6;
     background-size: cover;
+    margin: 0 auto;
 }
 
 #categories h3 {
