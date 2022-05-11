@@ -23,7 +23,7 @@ function displayPost (data) {
   console.log(data); 
   const title = data.title.rendered;
   const date = data.date;
-  const excerpt = data.excerpt;
+  const excerpt = data.excerpt.rendered;
   const postContent = data.content.rendered;
   getImageURL(data.featured_media); 
     
