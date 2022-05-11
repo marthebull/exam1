@@ -16,7 +16,6 @@ fetch(url)
   console.error('Error:', error);
 });
 
-const postHero = document.querySelector("#hero-post");
 const output = document.querySelector("#blog-post");
 
 function displayPost (data) {
@@ -25,7 +24,6 @@ function displayPost (data) {
   const date = data.date;
   const category = data.categories;
   const postContent = data.content.rendered;
-  const heroImg = data.featured_media;
   getImageURL(data.featured_media); 
     
     
@@ -33,10 +31,10 @@ function displayPost (data) {
   let content = `
       <h1>${title}</h1>
       <p class="date">${date}</p>
-      <p>${postContent}</p>  
+      <p>${postContent}</p>
   `;
 
-  postHero.innerHTML = heroImg;
+  
   output.innerHTML = content;
   document.title = title;
   
@@ -44,7 +42,7 @@ function displayPost (data) {
 
 
 function getImageURL(id) {
-  fetch(`https://marthebull.no/exam1/wp-json/wp/v2/media${id}`)
+  fetch(`https://marthebull.no/exam1/wp-json/wp/v2/media/${id}`)
   .then(response => response.json())
   .then(data => {
     console.log('Success (getImageURL):', data);
@@ -61,6 +59,7 @@ function addImage(src) {
   console.log ("IMG: " + src);
   if (src) {
     let img = document.createElement("img");
+    img.classList.add("post-hero")
     img.src = src;
     img.alt = "";
     img.width = 640;
