@@ -22,7 +22,6 @@ function displayPost (data) {
   console.log(data); 
   const title = data.title.rendered;
   const date = data.date;
-  const category = data.categories;
   const postContent = data.content.rendered;
   getImageURL(data.featured_media); 
     
