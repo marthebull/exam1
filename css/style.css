@@ -30,7 +30,7 @@ a {
 }
 
 a:visited > p, a > p, a {
-    color: #383838;
+    color: #202020;
   }
 
 
@@ -61,7 +61,7 @@ li {
 }
 
 .black, #insta-black {
-    color: #383838;
+    color: #202020;
 }
 
 .red {
@@ -71,12 +71,26 @@ li {
 
 .b-white {
     background-color: #f6f6f6;
-    color: #383838;
+    color: #202020;
+}
+
+.b-white:hover {
+    background-color: #f7a50c;
+    color: white;
 }
 
 .b-black {
-    background-color: #383838;
+    background-color: #202020;
     color: #f6f6f6;
+}
+
+.b-black:hover {
+    background-color: #f7a50c;
+    color: white;
+}
+
+.nav-item:hover, #categories h3:hover {
+    color: #f7a50c;
 }
 
 .button, #submit-button, #loadMore {
@@ -104,7 +118,7 @@ li {
 }
 
 .nav-black {
-    background-color: #383838;
+    background-color: #202020;
 }
 
 .nav-black a {
@@ -128,7 +142,7 @@ li {
 
 .nav-item {
     font-size: 1.3rem;
-    color: #383838;
+    color: #202020;
     margin-left: 20px;
 }
 
@@ -241,6 +255,7 @@ main > div, .no-div-h1 {
     max-width: 200px;
     position: relative;
     top: 65%;
+    height: 50px;
 }
 
 #species {
@@ -379,7 +394,7 @@ input[type=text] {
 /* Footer ----------------------------------------------------*/
 
 footer {
-    background-color: #383838;
+    background-color: #202020;
     width: 100vw;
     display: flex;
     flex-direction: column;

@@ -26,7 +26,7 @@ function listData(list){
       allPosts.innerHTML += `
         <div class="post-card">
             <a href="post.html?id=${item.id}">
-                <img src="${item._embedded['wp:featuredmedia']['0'].source_url}" alt="Featured blog post image">
+                <img id="${item.id}" src="${item._embedded['wp:featuredmedia']['0'].source_url}" alt="${item.alt_text}">
                 <h2 class="post-h2 black">${item.title.rendered}</h2>
                 <p class="black">${item.excerpt.rendered}</p>
             </a>
