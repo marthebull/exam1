@@ -33,6 +33,7 @@ function listData(list){
         </div>`;
     }
 
+    loadMore.style.display = "block";
 
 }
 
@@ -71,6 +72,7 @@ function loadFunction(list){
         }
 
     }
+    loadMore.style.display = "none";
 
 }
 
