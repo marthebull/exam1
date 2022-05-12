@@ -89,7 +89,7 @@ li {
     color: white;
 }
 
-.nav-item:hover, #categories h3:hover {
+.nav-item:hover, #categories h3:hover, .post-h2:hover {
     color: #f7a50c;
 }
 
