@@ -34,7 +34,7 @@ a:visited > p, a > p, a {
   }
 
 
-p, label, input[type=text],p > a, li {
+p, label, input[type=text], p > a, li {
     font-family: 'Open sans', Tahoma, Verdana, sans-serif;
     letter-spacing: 0rem;
     line-height: 2rem;
@@ -89,9 +89,10 @@ li {
     color: white;
 }
 
-.nav-item:hover, #categories h3:hover, .post-h2:hover {
+.nav-item:hover, .post-h2:hover, #categories div:hover {
     color: #f7a50c;
 }
+
 
 .button, #submit-button, #loadMore {
     padding: 20px 40px;
@@ -223,6 +224,7 @@ main > div, .no-div-h1 {
 
 /* Home */
 
+
 #about-us-short {
     background-image: url("/images/Opt-images/rhino-destop-vaughn-wright.jpg");
     background-position: center;
@@ -287,12 +289,19 @@ main > div, .no-div-h1 {
     
 }
 
-input[type=text] {
+input[type=text], #message {
     border: none;
     background-color: white;
     padding: 10px;
     margin: 5px 0;
     width: 100%;
+    border: 1px solid;
+    border-radius: 2px;
+    border-color: #d4d4d4;
+}
+
+#message {
+    align-content: top;
 }
 
 #form-container div {
@@ -362,10 +371,16 @@ input[type=text] {
 
 .post-card {
     background-color: white;
+    max-width: 400px;
+    min-width: 200px;
+    
 }
 
 .post-card img {
-    max-width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: 100%;
+    object-fit: cover;
 }
 
 .post-card p {

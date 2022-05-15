@@ -23,10 +23,10 @@ function validateForm(e) {
 
     nameMsg.innerHTML = "";
     if (submittedName.length < 5) {
-        nameMsg.innerHTML = "The name must be at least 5 characters long!";
+        nameMsg.innerHTML = "Name must be at least 5 characters long!";
     }
     if (/\d/.test(submittedName)) {
-        nameMsg.innerHTML = "The name cannot contain any digits!";
+        nameMsg.innerHTML = "Name cannot contain any digits!";
     }
 
 
