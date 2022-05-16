@@ -89,7 +89,7 @@ li {
     color: white;
 }
 
-.nav-item:hover, .post-h2:hover, #categories div:hover {
+.nav-item:hover, .post-h2:hover, #categories div a:hover {
     color: #f7a50c;
 }
 
@@ -209,7 +209,7 @@ main > div, .no-div-h1 {
 
 
 
-#blog-posts, #latest-posts, #categories {
+#blog-posts, #categories {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
@@ -223,6 +223,16 @@ main > div, .no-div-h1 {
 }
 
 /* Home */
+
+
+#latest-posts {
+    display: flex;
+    gap: 50px;
+    overflow: hidden;
+    margin: 50px auto 100px;
+    justify-content: center;
+    padding: 0 50px;
+}
 
 
 #about-us-short {
@@ -372,12 +382,12 @@ input[type=text], #message {
 .post-card {
     background-color: white;
     max-width: 400px;
-    min-width: 200px;
+    min-width: 300px;
     
 }
 
 .post-card img {
-    margin-bottom: 20px;
+    
     overflow: hidden;
     width: 100%;
     object-fit: cover;
