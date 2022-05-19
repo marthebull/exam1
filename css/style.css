@@ -136,6 +136,12 @@ li {
     align-items: center;
 }
 
+.nav-items {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
 #logo {
     width: 140px;
     margin: 0;
@@ -145,16 +151,34 @@ li {
 .nav-item {
     font-size: 1.3rem;
     color: #202020;
-    margin-left: 20px;
 }
 
 .nav .black a {
     color: #f6f6f6;
 }
 
-.active {
+.activated {
     border-bottom: 1.2px solid;
     padding-bottom: 5px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 22px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3 ease-in-out;
+    transition: all 0.3 ease-in-out;
+    background-color: #383838;
+}
+
+.white-bar {
+    background-color: #f6f6f6;
 }
 
 .hero {
@@ -188,7 +212,7 @@ main > div, .no-div-h1 {
 
 
 .text-content, .text-content div {
-    max-width: 700px;
+    max-width: 650px;
     margin: 10px auto;
     padding: 20px;
     display: flex;
@@ -209,7 +233,7 @@ main > div, .no-div-h1 {
 
 
 
-#blog-posts, #categories {
+#blog-posts{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
@@ -311,11 +335,14 @@ main > div, .no-div-h1 {
     padding: 50px 0;
 }
 
+#categories {
+    display: flex;
+}
 
 
 #categories div {
     height: 420px;
-    width: 300px;
+    min-width: 300px;
     display: flex;
     justify-content: center;
     color: #f6f6f6;
@@ -522,6 +549,22 @@ footer div {
 
 @media screen and (max-width: 1024px) {
 
+    #categories {
+        max-width: 100%;
+    }
+
+    #categories div {
+        height: 420px;
+        min-width: 150px;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        color: #f6f6f6;
+        background-size: cover;
+        
+    }
+
+   
 }
 
 
@@ -530,6 +573,65 @@ footer div {
 
 @media screen and (max-width: 650px) {
 
+
+    /* Nav */
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-items {
+        position: fixed;
+        padding: 50px 0;
+        height: 60vh;
+        z-index: 10;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #F6F6F6;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-black {
+        background-color: #202020;
+    }
+
+    .nav-item {
+        margin: 20px 0;
+    }
+
+    .nav-items.active {
+        left: 0;
+    }
+
+    
+
+    /* Text content  */
+
+    .text-content {
+        max-width: 100%;
+    }
+
+    #about-us-short p{
+        max-width: 450px;
+        margin: auto;
+    }
+    
     /* Header*/
 
     .hero-home {
@@ -538,6 +640,29 @@ footer div {
 
     .hero-about {
         background-image: url("/images/Opt-images/turtle-mobile-david-leveque.jpg");
+    }
+
+    /* posts og categories */
+
+    #blog-posts{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 0;
+        justify-content: center;
+    }
+
+    #categories {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 0;
+        justify-content: center;
+    }
+
+    #categories div {
+        height: 420px;
+        min-width: 300px;
     }
 
 
@@ -562,9 +687,11 @@ footer div {
         text-align: center;
     }
 
-    .nav-item {
-        margin: 0;
+    #footer-nav .nav-item {
+        margin: 10px auto;
     }
+
+
 
 
 
