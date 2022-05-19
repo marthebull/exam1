@@ -1,5 +1,5 @@
 
-fetch("https://marthebull.no/exam1/wp-json/wp/v2/posts?_embed&per_page=9&page=1", {
+fetch("https://marthebull.no/exam1/wp-json/wp/v2/posts?_embed&per_page=6&page=1", {
 	"method": "GET"
 })
 
