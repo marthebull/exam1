@@ -5,22 +5,19 @@ fetch("https://marthebull.no/exam1/wp-json/wp/v2/posts?_embed&per_page=9&page=1"
 
 .then(response => response.json())
 .then(myData => {
-    console.log(myData);
+    //console.log(myData);
     listData(myData);
 })
 .catch(error => postsCarousel.innerHTML = "Something's wrong!");
 
 const postsCarousel = document.querySelector("#latest-posts");
-const nextBtn = document.querySelector(".next-btn");
-const prevBtn = document.querySelector(".prev-btn");
-
 
 function listData(list){
-    console.log(list.length); 
+    //console.log(list.length); 
   
     postsCarousel.innerHTML = "";
     for (let item of list) {
-      console.log(item);
+      //console.log(item);
       postsCarousel.innerHTML += `
         <div class="latest-post-card">
             <a href="post.html?id=${item.id}">
@@ -32,16 +29,16 @@ function listData(list){
     }
 }
 
-postsCarousel.forEach((item, i) => {
-    let containerDimensions = item.getBoundingClientRect();
-    let containerWidth = containerDimensions.width;
-    console.log("noe skjer!");
+const postsItem = document.querySelector(".latest-post-card")
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+    
+let counter = 1;
+const size = postsItem[0].clientWidth;
 
-    nextBtn[i].addEventListener('click', () => {
-        item.scrollLeft += containerWidth;
-    })
 
-    prevBtn[i].addEventListener('click', () => {
-        item.scrollLeft -= containerWidth;
-    })
-})
+nextBtn.addEventListener('click', () => {
+    postsCarousel.style.transition = "transform 0.4s ease-in-out";
+    counter++;
+    console.log(counter);
+});

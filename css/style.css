@@ -224,10 +224,12 @@ main > div, .no-div-h1 {
 
 /* Home */
 
-
+#slider-wrapper {
+    position: relative;
+}
 
 #latest-posts {
-    padding: 0 10vw;
+    padding: 20px 7vw;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
@@ -235,23 +237,53 @@ main > div, .no-div-h1 {
 
 #latest-posts::-webkit-scrollbar {
     display: none;
-  }
+}
 
-.next-btn, .prev-btn {
-    position: relative;
+.prev-btn, .next-btn {
+  border: none;
+  background-color: #f6f6f6;
+  width: 7vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #F6F6F6 100%);
+  z-index: 9;
+}
+
+.fa-angle-right {
+    font-size: 2rem;
+    opacity: .5;
+}
+
+.fa-angle-right:hover {
+    opacity: 1;
 }
 
 .prev-btn {
-    top: 50%;
-    left: -50px;
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.next-btn {
+    right: 0;
+}
+
+
+.prev-btn:hover img,
+.next-btn:hover img {
+  opacity: 1;
 }
 
 .latest-post-card {
     flex: 0 0 auto;
     margin-right: 40px;
     background-color: white;
-    max-width: 400px;
-    min-width: 300px;
+    max-width: 300px;
+    min-width: 200px;
 }
 
 .latest-post-card img {
