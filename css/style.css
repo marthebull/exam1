@@ -225,15 +225,17 @@ main > div, .no-div-h1 {
 /* Home */
 
 
+
 #latest-posts {
+    padding: 0 10vw;
     display: flex;
-    gap: 50px;
-    overflow: hidden;
-    margin: 50px auto 100px;
-    
-    padding: 0 50px;
-    position: relative;
+    overflow-x: auto;
+    scroll-behavior: smooth;
 }
+
+#latest-posts::-webkit-scrollbar {
+    display: none;
+  }
 
 .next-btn, .prev-btn {
     position: relative;
@@ -242,6 +244,25 @@ main > div, .no-div-h1 {
 .prev-btn {
     top: 50%;
     left: -50px;
+}
+
+.latest-post-card {
+    flex: 0 0 auto;
+    margin-right: 40px;
+    background-color: white;
+    max-width: 400px;
+    min-width: 300px;
+}
+
+.latest-post-card img {
+    overflow: hidden;
+    width: 100%;
+    object-fit: cover;
+}
+
+.latest-post-card p {
+    margin: 20px;
+    margin-left: 20px;
 }
 
 #about-us-short {

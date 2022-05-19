@@ -22,7 +22,7 @@ function listData(list){
     for (let item of list) {
       console.log(item);
       postsCarousel.innerHTML += `
-        <div class="post-card">
+        <div class="latest-post-card">
             <a href="post.html?id=${item.id}">
                 <img id="${item.id}" src="${item._embedded['wp:featuredmedia']['0'].source_url}" alt="${item.alt_text}">
                 <h2 class="post-h2 black">${item.title.rendered}</h2>
