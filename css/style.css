@@ -570,7 +570,9 @@ footer div {
         max-width: 100%;
     }
 
-
+    #blog-post {
+        max-width: 100%;
+    }
    
 }
 
