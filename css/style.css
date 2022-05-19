@@ -89,7 +89,7 @@ li {
     color: white;
 }
 
-.nav-item:hover, .post-h2:hover, #categories div a:hover {
+.nav-item:hover, .post-h2:hover, #categories div:hover {
     color: #f7a50c;
 }
 
@@ -230,10 +230,19 @@ main > div, .no-div-h1 {
     gap: 50px;
     overflow: hidden;
     margin: 50px auto 100px;
-    justify-content: center;
+    
     padding: 0 50px;
+    position: relative;
 }
 
+.next-btn, .prev-btn {
+    position: relative;
+}
+
+.prev-btn {
+    top: 50%;
+    left: -50px;
+}
 
 #about-us-short {
     background-image: url("/images/Opt-images/rhino-destop-vaughn-wright.jpg");
