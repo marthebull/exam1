@@ -115,8 +115,8 @@ li {
 
 
 .nav-cont {
-    max-width: 100%;
-    padding: 30px;
+    width: 100%;
+    padding: 20px;
 }
 
 .nav-black {
@@ -172,8 +172,8 @@ li {
     width: 22px;
     height: 3px;
     margin: 5px auto;
-    -webkit-transition: all 0.3 ease-in-out;
-    transition: all 0.3 ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     background-color: #383838;
 }
 
@@ -213,7 +213,7 @@ main > div, .no-div-h1 {
 
 .text-content, .text-content div {
     max-width: 600px;
-    margin: 10px auto;
+    margin: 0 auto;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -263,7 +263,7 @@ main > div, .no-div-h1 {
 
 .latest-post-card {
     flex: 0 0 auto;
-    margin-right: 40px;
+    margin-right: 20px;
     background-color: white;
     max-width: 300px;
     min-width: 200px;
@@ -421,10 +421,6 @@ input[type=text], #message {
 
 /* Posts*/
 
-
-
-
-
 .post-card {
     background-color: white;
     max-width: 350px;
@@ -459,8 +455,43 @@ input[type=text], #message {
     margin-bottom: 50px;
 }
 
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
 
+.lightbox-inner {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, .3);
+}
 
+.lightbox-close {
+    background: none;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, .5);
+}
+
+.lightbox-close:hover {
+    color: rgba(0, 0, 0, .8);
+}
 
 
 /* Footer ----------------------------------------------------*/
