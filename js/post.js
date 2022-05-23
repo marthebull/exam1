@@ -54,20 +54,24 @@ function getImageURL(id) {
     console.error('Error (getImageURL):', error);
   });
 
-
-  function addImage(src) {
-    console.log ("IMG: " + src);
-    if (src) {
-      let img = document.createElement("img");
-      img.classList.add("post-hero");
-      img.src = src;
-      img.alt = "";
-      img.width = 600;
-      output.prepend(img);
-    }
-  }
-
 }
+
+
+function addImage(src) {
+  console.log ("IMG: " + src);
+  if (src) {
+    let img = document.createElement("img");
+    img.classList.add("post-hero");
+    img.src = src;
+    img.alt = src.alt_text;
+    img.width = 600;
+    output.prepend(img);
+  }
+}
+
+
+
+
 
 
 
