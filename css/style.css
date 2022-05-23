@@ -423,8 +423,7 @@ input[type=text], #message {
 .post-card {
     background-color: white;
     max-width: 350px;
-    min-width: 300px;
-    
+    min-width: 300px;   
 }
 
 .post-card img {
@@ -433,6 +432,8 @@ input[type=text], #message {
     width: 100%;
     object-fit: cover;
 }
+
+
 
 .post-card p {
     margin: 20px;

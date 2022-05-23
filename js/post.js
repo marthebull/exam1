@@ -17,7 +17,7 @@ fetch(url)
 });
 
 const output = document.querySelector("#blog-post");
-const metaDesc = document.querySelector("#meta-desc");
+const metaDesc = document.getElementsByTagName('meta');
 
 function displayPost (data) {
   console.log(data); 
@@ -37,8 +37,8 @@ function displayPost (data) {
 
   
   output.innerHTML = content;
-  metaDesc.innerHTML = excerpt;
   document.title = title;
+  metaDesc.description.content = excerpt;
   
 }
 
