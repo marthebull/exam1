@@ -70,11 +70,9 @@ function addImage(src) {
 }
 
 
-import Lightbox from "./lightbox.js";
 
-Lightbox.activate();
 
-Lightbox.show("<p>heihei</p>");
+
 
 
 

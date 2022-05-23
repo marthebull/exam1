@@ -29,16 +29,3 @@ function listData(list){
     }
 }
 
-const postsItem = document.querySelector(".latest-post-card")
-const prevBtn = document.querySelector(".prev-btn");
-const nextBtn = document.querySelector(".next-btn");
-    
-let counter = 1;
-//const size = postsItem[0].clientWidth;
-
-
-//nextBtn.addEventListener('click', () => {
-  //  postsCarousel.style.transition = "transform 0.4s ease-in-out";
-  //  counter++;
-  //  console.log(counter);
-//});
