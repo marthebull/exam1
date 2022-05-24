@@ -35,4 +35,23 @@ function listData(list){
             </a>
         </div>`;
     }
+    
 }
+
+
+
+const prevBtn = document.getElementById('.prevBtn');
+const nextBtn = document.getElementById('.nextBtn');
+
+
+function scrollPrev() {
+    console.log("Knappen ble klikket");
+    document.querySelector('#latest-posts').scrollLeft += -400;
+}
+
+function scrollNext() {
+    console.log("Knappen ble klikket");
+    document.querySelector('#latest-posts').scrollLeft += 400;
+}
+
+

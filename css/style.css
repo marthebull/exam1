@@ -255,21 +255,48 @@ main > div, .no-div-h1 {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 #latest-posts {
     padding: 30px 0;
+    max-width: 95%;
+    margin: auto;
     display: flex;
-    gap: 30px;
-    overflow-x: auto;
+    gap: 100px;
     scroll-behavior: smooth;
+    overflow-x: scroll;
+}
+
+.prev-btn, .next-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    top: 41%;
+    background: none;
+    opacity: .4;
+    
+}
+
+.prev-btn:hover, .next-btn:hover {
+    opacity: 1;
+}
+
+.prev-btn {
+    left: -50px;
+}
+
+.next-btn {
+    right: -50px;
 }
 
 
 .latest-post-card {
-    flex: 0 0 auto;
-    margin-right: 20px;
-    background-color: white;
+    background-color: black;
+    width: 350px;
     max-width: 300px;
     min-width: 200px;
 }
@@ -425,6 +452,7 @@ input[type=text], #message {
 
 .post-card {
     background-color: white;
+    min-height: 385px;
     max-width: 350px;
     min-width: 300px;   
 }
