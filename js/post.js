@@ -48,7 +48,7 @@ function displayPost (data) {
 
   
   output.innerHTML = content;
-  document.title = title;
+  document.title = title + " | EXTINCT";
   metaDesc.description.content = excerpt;
   
 }
