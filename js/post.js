@@ -90,25 +90,25 @@ document.body.appendChild(lightbox);
 
 
 // Jeg tror det er her jeg ikke når fram med bare "img" for variabelen "images".
-const images = document.querySelectorAll('img');
-images.forEach(image => {
-  image.addEventListener('click', e => {
-    //console.log(image);
-    lightbox.classList.add('active');
-    const img = document.createElement('img');
-    img.classList.add('active');
-    img.src = image.src;
-    while (lightbox.firstChild) {
-      lightbox.removeChild(lightbox.firstChild);
-    }
-    lightbox.appendChild(img);
-  })
-})
+// const images = document.querySelectorAll('img');
+// images.forEach(image => {
+//   image.addEventListener('click', e => {
+//     //console.log(image);
+//     lightbox.classList.add('active');
+//     const img = document.createElement('img');
+//     img.classList.add('active');
+//     img.src = image.src;
+//     while (lightbox.firstChild) {
+//       lightbox.removeChild(lightbox.firstChild);
+//     }
+//     lightbox.appendChild(img);
+//   })
+// })
 
-lightbox.addEventListener('click', e => {
-  if (e.target !== e.currentTarget) return
-  lightbox.classList.remove('active');
-})
+// lightbox.addEventListener('click', e => {
+//   if (e.target !== e.currentTarget) return
+//   lightbox.classList.remove('active');
+// })
 
 
 
