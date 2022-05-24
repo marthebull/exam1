@@ -690,12 +690,16 @@ footer div {
         margin: auto;
     }
 
-    .prev-btn {
-        left: -30px;
+    .prev-btn, .next-btn {
+        display: none;
     }
     
-    .next-btn {
-        right: -30px;
+    #slider-wrapper > div {
+        width: 100%;
+    }
+
+    #latest-posts {
+        gap: 20px;
     }
 
     #categories {
