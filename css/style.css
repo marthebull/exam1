@@ -717,7 +717,11 @@ footer div {
     }
 
 
-    /* Contact us */
+    /* About us */
+
+    .text-content div {
+        padding: 0;
+    }
 
     
 
