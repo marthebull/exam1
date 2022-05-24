@@ -463,7 +463,6 @@ input[type=text], #message {
 }
 
 .post-card img {
-    
     overflow: hidden;
     width: 100%;
     object-fit: cover;

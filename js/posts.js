@@ -47,6 +47,7 @@ function listData(list){
 
 const loadMore = document.querySelector("#loadMore")
 
+
 function loadFunction(list){
 
     fetch("https://marthebull.no/exam1/wp-json/wp/v2/posts?_embed&per_page=9&page=2", {
