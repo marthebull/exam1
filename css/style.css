@@ -308,7 +308,7 @@ main > div, .no-div-h1 {
 }
 
 .excerpt {
-    min-height: 171px;
+    height: 171px;
 }
 
 .latest-post-card img {
