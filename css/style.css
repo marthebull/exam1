@@ -250,12 +250,17 @@ main > div, .no-div-h1 {
 
 /* Home */
 
-#slider-wrapper {
+#slider-wrapper, #slider-wrapper > div {
     position: relative;
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+#slider-wrapper > div {
+    width: 90%;
+    margin: auto;
 }
 
 #latest-posts {
@@ -263,7 +268,7 @@ main > div, .no-div-h1 {
     max-width: 95%;
     margin: auto;
     display: flex;
-    gap: 100px;
+    gap: 50px;
     scroll-behavior: smooth;
     overflow-x: scroll;
 }
@@ -678,6 +683,14 @@ footer div {
 
     .post-card {
         margin: auto;
+    }
+
+    .prev-btn {
+        left: -30px;
+    }
+    
+    .next-btn {
+        right: -30px;
     }
 
     #categories {

@@ -1,5 +1,5 @@
 
-fetch("https://marthebull.no/exam1/wp-json/wp/v2/posts?_embed&per_page=6&page=1", {
+fetch("https://marthebull.no/exam1/wp-json/wp/v2/posts?_embed&per_page=9&page=1", {
 	"method": "GET"
 })
 
@@ -24,6 +24,8 @@ function listData(list){
       let imgScr = item._embedded['wp:featuredmedia']['0'].media_details.sizes.medium.source_url;
       let altTxt = item._embedded['wp:featuredmedia']['0'].alt_text;
 
+
+
       postsCarousel.innerHTML += `
         <div class="post-card">
             <a href="post.html?id=${item.id}">
@@ -42,16 +44,19 @@ function listData(list){
 
 const prevBtn = document.getElementById('.prevBtn');
 const nextBtn = document.getElementById('.nextBtn');
+const positionInfo = postsCarousel.getBoundingClientRect();
+const scrolling = positionInfo.width;
+console.log(positionInfo);
 
 
 function scrollPrev() {
-    console.log("Knappen ble klikket");
-    document.querySelector('#latest-posts').scrollLeft += -400;
+    //console.log("Knappen ble klikket");
+    postsCarousel.scrollLeft -= 350;
 }
 
 function scrollNext() {
-    console.log("Knappen ble klikket");
-    document.querySelector('#latest-posts').scrollLeft += 400;
+    //console.log("Knappen ble klikket");
+    postsCarousel.scrollLeft += 350;
 }
 
 
