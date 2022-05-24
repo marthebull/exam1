@@ -42,7 +42,6 @@ function displayPost (data) {
 
   let content = `
       <h1>${title}</h1>
-      
       <p class="date">${date.getDate()}. ${letterMonths[monthDate]} ${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}</p>
       <p class="post-content">${postContent}</p>
   `;

@@ -44,9 +44,7 @@ function listData(list){
 
 const prevBtn = document.getElementById('.prevBtn');
 const nextBtn = document.getElementById('.nextBtn');
-const positionInfo = postsCarousel.getBoundingClientRect();
-const scrolling = positionInfo.width;
-console.log(positionInfo);
+
 
 
 function scrollPrev() {
