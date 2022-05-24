@@ -307,6 +307,10 @@ main > div, .no-div-h1 {
     min-height: 385px;
 }
 
+.excerpt {
+    min-height: 171px;
+}
+
 .latest-post-card img {
     overflow: hidden;
     width: 100%;
