@@ -61,6 +61,7 @@ function getImageURL(id) {
   .then(data => {
     console.log('Success (getImageURL):', data);
     addImage (data.source_url);
+    addEventlistenersToReceivedData()
   })
   .catch((error) => {
     console.error('Error (getImageURL):', error);
