@@ -83,35 +83,33 @@ function addImage(src) {
 
 
 
-// Lightbox, denne funker på bilde satt inn i html, men når ikke fram til bildene i innleggene lagt inn via content
+// Lightbox
 
 const lightbox = document.createElement("div");
 lightbox.id = 'lightbox';
 document.body.appendChild(lightbox);
 
 
-// Jeg tror det er her jeg ikke når fram med bare "img" for variabelen "images".
-
 function addEventlistenersToReceivedData() {
   const images = document.querySelectorAll('img');
-images.forEach(image => {
-  image.addEventListener('click', e => {
-    //console.log(image);
-    lightbox.classList.add('active');
-    const img = document.createElement('img');
-    img.classList.add('active');
-    img.src = image.src;
-    while (lightbox.firstChild) {
-      lightbox.removeChild(lightbox.firstChild);
-    }
-    lightbox.appendChild(img);
+  images.forEach(image => {
+    image.addEventListener('click', e => {
+      //console.log(image);
+      lightbox.classList.add('active');
+      const img = document.createElement('img');
+      img.classList.add('active');
+      img.src = image.src;
+      while (lightbox.firstChild) {
+        lightbox.removeChild(lightbox.firstChild);
+      }
+      lightbox.appendChild(img);
+    })
   })
-})
 
-lightbox.addEventListener('click', e => {
-  if (e.target !== e.currentTarget) return
-  lightbox.classList.remove('active');
-})
+  lightbox.addEventListener('click', e => {
+    if (e.target !== e.currentTarget) return
+    lightbox.classList.remove('active');
+  })
 
 }
 
