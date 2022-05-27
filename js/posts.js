@@ -33,7 +33,7 @@ function listData(list){
                 <img id="${item.id}" src="${imgScr}" alt="${altTxt}">
                 <div>
                     <h2 class="post-h2 black">${item.title.rendered}</h2>
-                    <p class="black excerpt">${item.excerpt.rendered}</p>
+                    <p class="black">${item.excerpt.rendered}</p>
                 </div>
             </a>
         </div>`;
