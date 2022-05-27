@@ -33,7 +33,7 @@ function listData(list){
                 <img id="${item.id}" src="${imgScr}" alt="${altTxt}">
                 <div>
                     <h2 class="post-h2 black">${item.title.rendered}</h2>
-                    <p class="black">${item.excerpt.rendered}</p>
+                    <p class="black excerpt">${item.excerpt.rendered}</p>
                 </div>
             </a>
         </div>`;
@@ -50,7 +50,7 @@ const loadMore = document.querySelector("#loadMore")
 
 function loadFunction(list){
 
-    fetch("https://marthebull.no/exam1/wp-json/wp/v2/posts?_embed&per_page=9&page=2", {
+    fetch("https://marthebull.no/exam1/wp-json/wp/v2/posts?_embed&per_page=6&page=2", {
         "method": "GET"
     })
     

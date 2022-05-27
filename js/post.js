@@ -22,12 +22,11 @@ fetch(url)
 
 const output = document.querySelector("#blog-post");
 const metaDesc = document.getElementsByTagName('meta');
-//const months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
 const letterMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-//const day = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
+
 
 function displayPost (data) {
-  console.log(data); 
+  //console.log(data); 
   const title = data.title.rendered;
   const date = new Date(data.date);
   const excerpt = data.excerpt.rendered;
@@ -36,10 +35,8 @@ function displayPost (data) {
   getImageURL(data.featured_media); 
     
   let postDate = new Date(data.date);
-  //console.log(eventDate);
-  let yearDate =  postDate.getYear();
+  //console.log(postDate);
   let monthDate = postDate.getMonth();
-  let dayDate =  postDate.getDate();
 
   let content = `
       <h1>${title}</h1>
@@ -59,7 +56,7 @@ function getImageURL(id) {
   fetch(`https://marthebull.no/exam1/wp-json/wp/v2/media/${id}`)
   .then(response => response.json())
   .then(data => {
-    console.log('Success (getImageURL):', data);
+    //console.log('Success (getImageURL):', data);
     addImage (data.source_url);
     addEventlistenersToReceivedData()
   })
@@ -69,14 +66,15 @@ function getImageURL(id) {
 
 }
 
+    
 
 function addImage(src) {
-  console.log ("IMG: " + src);
+  //console.log ("IMG: " + src);
   if (src) {
     let img = document.createElement("img");
     img.classList.add("post-hero");
     img.src = src;
-    img.alt = src.alt_text;
+    img.alt = img.alt_text;
     img.width = 600;
     output.prepend(img);
   }
