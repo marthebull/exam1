@@ -4,7 +4,7 @@ form.addEventListener("submit", validateForm);
 const fullName = document.querySelector ("input#name");
 const subject = document.querySelector ("input#subject");
 const email = document.querySelector ("input#email");
-const message = document.querySelector ("input#message");
+const message = document.querySelector ("#message");
 
 
 const nameMsg = document.querySelector ("#nameMsg");

@@ -34,7 +34,7 @@ a:visited > p, a > p, a {
   }
 
 
-p, label, input[type=text], p > a, li {
+p, label, input[type=text], p > a, li, textarea {
     font-family: 'Open sans', Tahoma, Verdana, sans-serif;
     letter-spacing: 0rem;
     line-height: 2rem;
