@@ -187,7 +187,12 @@ li {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .hero-home {
     background-image: url("/images/Opt-images/whales-desktop-vivek-kumar-.jpg");
