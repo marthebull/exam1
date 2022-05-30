@@ -44,9 +44,8 @@ function listData(list){
 
 const prevBtn = document.getElementById('.prevBtn');
 const nextBtn = document.getElementById('.nextBtn');
-// Her har jeg testet med å scrolle tilsvarende width på karusellen, men det ble enten 64 eller 0, så jeg kunne ikke bruke det.
-// Derfor har jeg nå bare sagt 350 som tilsvarer en kort pluss gap, så man blar videre ett kort av gangen. 
-//const scrollAmount = postsCarousel.clientWidth;
+// Her har jeg testet med å scrolle tilsvarende width på karusellen, men da ble det enten consollet at dette var 64 eller 0, så jeg fikk ikke til å bruke det.
+// Derfor har jeg nå bare sagt 350 som tilsvarer en post-kort pluss gap, så man blar videre ett kort av gangen. 
 
 
 function scrollPrev() {
